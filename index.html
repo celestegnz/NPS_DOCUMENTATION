@@ -5,78 +5,397 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NPS Migración 2024-2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1,h2,h3 {
+            font-family: 'Roboto', sans-serif;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra personalizada */
+        }
+/* Estilo para la burbuja flotante */
+.contact-bubble {
+    position: fixed; /* Hace que se quede fija en la pantalla */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde el borde derecho */
+    background-color: #3498db; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Animación de hover */
+    z-index: 50; /* Asegura que la burbuja esté encima del contenido */
+}
+
+.hero-section {
+    position: relative; /* Asegura que el hero section esté en un contexto de apilamiento adecuado */
+    z-index: 10; /* Deja que otros elementos se apilen sobre él si es necesario */
+}
+
+.contact-bubble:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+        /* Desplazamiento suave para los enlaces */
+        html {
+            scroll-behavior: smooth;
+        }
+
+.icono-img {
+    position: absolute;
+    top: -20px; /* Ajusta la posición vertical para que esté sobre el cuadro */
+    left: 50%; /* Inicialmente centrado en el cuadro de "101 Jobs Reestructurados" */
+    transform: translateX(-50%);
+    z-index: 30; /* Asegura que el icono esté por encima del contenido */
+    animation: move-icon 6s linear infinite; /* Animación para mover el icono de un cuadro a otro */
+}
+
+/* Definir la animación de movimiento */
+@keyframes move-icon {
+    0% {
+        /* Inicio: Cuadro 101 Jobs */
+        top: -20px;
+        left: 50%;
+    }
+    33% {
+        /* A la mitad: Cuadro 45 Jobs Migrados */
+        top: -20px;
+        left: 50%; /* Ajusta si necesitas que el icono pase por el cuadro "Migrated Jobs" */
+    }
+    66% {
+        /* Cuadro de +35 Universes */
+        top: -20px;
+        left: 300%; /* Ajusta la posición para que esté sobre el cuadro "+35 Restructuring Universes" */
+    }
+    100% {
+        /* Regreso al primer cuadro (101 Jobs) */
+        top: -20px;
+        left: 50%; /* Regresa al primer cuadro */
+    }
+}
+
+/* Efecto de hover para el icono */
+.icono-img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón */
+}
+
+
+
+    </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-700">
-    <!-- Navbar -->
-    <header class="bg-white shadow-md p-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-blue-600">NPS Documentación</h1>
-            <nav class="space-x-8">
-                <a href="#" class="text-lg text-gray-600 hover:text-blue-600 transition">Inicio</a>
-                <a href="#" class="text-lg text-gray-600 hover:text-blue-600 transition">Commerce</a>
-                <a href="#" class="text-lg text-gray-600 hover:text-blue-600 transition">Fintech</a>
-                <a href="#" class="text-lg text-gray-600 hover:text-blue-600 transition">Manual de usuario</a>
-            </nav>
-        </div>
-    </header>
-
+  <!-- Burbuja flotante -->
+  <div class="contact-bubble">
+    <a href="#manual-usuario" style="color: white; text-decoration: none;">¿Necesitas contactarnos?</a>
+</div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-500 to-blue-400 text-white py-20">
+    <section class="bg-gradient-to-br from-blue-800 to-blue-300 text-white py-12 relative">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl font-extrabold">Bienvenido a nuestra Documentación</h2>
-            <p class="mt-4 text-lg">AS&DS CX</p>
-            <p class="mt-4 text-gray-200">Nuestra misión es convertir datos en insights que guíen a cada equipo a transformar el servicio al cliente en experiencias inolvidables...</p>
+            <h2 class="text-5xl font-extrabold">Welcome to Our Documentation</h2>
+            <p class="mt-2 text-1xl">A&DS CX</p>
+            <p class="mt-2 text-lg text-sm max-w-3xl mx-auto">Our mission is to turn data into insights that guide each team in transforming customer service into unforgettable experiences...</p>
         </div>
     </section>
+    
+<!-- Metrics Section -->
+<section class="max-w-6xl mx-auto py-12 px-6 text-center">
+    <h3 class="text-2xl font-bold text-gray-700 mb-6">Our metrics tell the story</h3>
+    <div class="flex flex-wrap justify-center gap-8">
+        <!-- Cuadro de "101 Jobs Reestructurados" con icono sobre él -->
+        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
+            <!-- Icono flotante -->
+            <img src="/img/Meli - Presets 27.png" alt="Icono 1" class="icono-img w-20 h-12 object-contain animate-move">
+            <p class="text-3xl font-bold text-blue-600">101</p>
+            <p class="text-gray-500 mt-2">Restructured Jobs</p>
+        </div>
+        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105">
+            <p class="text-3xl font-bold text-blue-600">45</p>
+            <p class="text-gray-500 mt-2">Migrated Jobs</p>
+        </div>
+        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105">
+            <p class="text-3xl font-bold text-blue-600">+35</p>
+            <p class="text-gray-500 mt-2">Restructured Universes</p>
+        </div>
+    </div>
+</section>
 
     <!-- Focused Sections for Fintech and Commerce -->
-    <section class="max-w-6xl mx-auto py-16 grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
+    <section id="fintech" class="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 gap-16 px-8">
         <!-- Fintech Universe -->
-        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-            <h3 class="text-3xl font-semibold text-blue-600 mb-4">Universo NPS - Fintech</h3>
-            <p class="text-gray-500">Explora la documentación y herramientas clave de Fintech.</p>
-            <div class="mt-6 space-y-4">
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Universos Migrados</button>
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Documentación Técnica</button>
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Métricas de negocio</button>
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Paso a paso para envío de encuestas</button>
+        <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+            <h3 class="text-4xl font-semibold text-blue-600 mb-6">Universo NPS - Fintech</h3>
+            <p class="text-lg text-gray-500 mb-6">Explora la documentación y herramientas clave de Fintech.</p>
+            <div class="mt-8 space-y-5">
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#migrados-fintech">Universos Migrados</a>
+                </button>
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#parametria-fintech">Gsheet de parametría</a></button>
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#documentacion-fintech">Documentación Técnica</a></button>
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#encuestas-fintech">Paso a paso para envío de encuestas</a></button>
             </div>
         </div>
-
+    
         <!-- Commerce Universe -->
-        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-            <h3 class="text-3xl font-semibold text-blue-600 mb-4">Universo NPS - Commerce</h3>
-            <p class="text-gray-500">Accede a la información principal para el área de Commerce.</p>
-            <div class="mt-6 space-y-4">
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Universos Migrados</button>
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Documentación Técnica</button>
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Métricas de negocio</button>
-                <button class="bg-blue-50 text-blue-600 py-3 w-full rounded-md hover:bg-blue-100 text-lg font-semibold">Paso a paso para envío de encuestas</button>
+        <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+            <h3 class="text-4xl font-semibold text-blue-600 mb-6">Universo NPS - Commerce</h3>
+            <p class="text-lg text-gray-500 mb-6">Accede a la información principal para el área de Commerce.</p>
+            <div class="mt-8 space-y-5">
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#migrados-commerce">Universos Migrados</a></button>
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#metricas-commerce">Gsheet de parametría</a></button>
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#documentacion-commerce">Documentación Técnica</a></button>
+                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#encuestas-commerce">Paso a paso para envío de encuestas</a></button>
             </div>
         </div>
     </section>
+    
 
-    <!-- Metrics Section (Optional) -->
-    <section class="max-w-6xl mx-auto py-16 px-6 text-center">
-        <h3 class="text-3xl font-bold text-gray-700 mb-6">Our metrics tell the story</h3>
-        <div class="flex flex-wrap justify-center gap-8">
-            <div class="bg-blue-100 p-8 rounded-lg shadow-lg w-40">
-                <p class="text-4xl font-bold text-blue-600">30</p>
-                <p class="text-gray-500 mt-2">Jobs migrados</p>
+<!-- Línea de separación entre bloques de botones y contenido -->
+<div class="border-t-8 border-blue-600 my-5 w-full"></div>
+<!-- Contenido de "Universos Migrados" para Fintech -->
+<section id="migrados-fintech" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-8">
+        <h3 class="text-3xl font-semibold text-blue-600 mb-8">Universos Migrados - Fintech</h3>
+        <p class="text-lg text-gray-600 mb-8">Aquí encontrarás el listado de Jobs con su correspondiente ID, tabla y descripción proporcionada por el negocio.</p>
+
+        <!-- Lista de Jobs - Tabla -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h4 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Lista de Jobs Migrados</h4>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto border-collapse border border-gray-200">
+                    <thead class="bg-blue-600 text-white text-sm">
+                        <tr>
+                            <th class="px-4 py-3 text-left">JOB ID</th>
+                            <th class="px-4 py-3 text-left">JOB NAME</th>
+                            <th class="px-4 py-3 text-left">TABLE NAME</th>
+                            <th class="px-4 py-3 text-left">DESCRIPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">278204</td>
+                            <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_SAMPLING</td>
+                            <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">272944</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_SAMPLING</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">272469</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_SAMPLING</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">278414</td>
+                            <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_SAMPLING</td>
+                            <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">278864</td>
+                            <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_SAMPLING (efectivo y virtual)</td>
+                            <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_EF_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">279253</td>
+                            <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_SAMPLING (efectivo y virtual)</td>
+                            <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">280026</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_SAMPLING</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">279382</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CARDS_SAMPLING</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CARDS_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">64498</td>
+                            <td class="px-3 py-2">PROXIMO Relacional (individuos, teens, newbies)</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">224417</td>
+                            <td class="px-3 py-2">PROXIMO Portabilidad</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">224417</td>
+                            <td class="px-3 py-2">PROXIMO OP buyers</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">224417</td>
+                            <td class="px-3 py-2">PROXIMO MP</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">224417</td>
+                            <td class="px-3 py-2">PROXIMO Remesas</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">224417</td>
+                            <td class="px-3 py-2">PROXIMO Churn</td>
+                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="bg-blue-100 p-8 rounded-lg shadow-lg w-40">
-                <p class="text-4xl font-bold text-blue-600">35</p>
-                <p class="text-gray-500 mt-2">Jobs mejorados</p>
-            </div>
-            <div class="bg-blue-100 p-8 rounded-lg shadow-lg w-40">
-                <p class="text-4xl font-bold text-blue-600">25</p>
-                <p class="text-gray-500 mt-2">Universos reestructurados</p>
-            </div>
-        </div>
+        </section>
+
+
+<!-- Documentación Técnica Fintech -->
+<section id="migrados-fintech" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-8">
+        <h3 class="text-3xl font-semibold text-blue-600 mb-8">Documentación Técnica</h3>
+        <p class="text-lg text-gray-600 mb-8">En esta sección se explica detalladamente el flujo de trabajo, la segmentación, el proceso de muestreo y otros aspectos técnicos clave de NPS en el contexto Fintech. A continuación, encontrarás capturas de pantalla, ejemplos de código y explicaciones paso a paso.</p>
+    </div>
+<section class="bg-white p-6 rounded-lg shadow-lg">
+    <!-- Imagen de DataFlow -->
+    <div class="text-center mb-8">
+        <img src="/img/DF.png" alt="DataFlow Diagram" class="max-w-3xl h-auto rounded-lg shadow-lg mx-auto">
+    </div>
+
+    <!-- Step 1 -> WAIT -->
+    <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+        <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #1 -> WAIT</h4>
+        <p class="text-lg text-gray-700 max-w-full">En este paso, se define el periodo de espera para que las tablas necesarias estén actualizadas. Este paso es crucial para garantizar que los datos estén completamente cargados antes de continuar con el procesamiento.</p>
     </section>
 
+    <!-- Step 2 -> Query Segmentación -->
+    <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-12">
+        <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #2 -> Query Segmentación</h4>
+        <p class="text-lg text-gray-700 max-w-full">En esta sección se describe el proceso de segmentación de los datos utilizados para la muestra NPS. El código de segmentación permite organizar los datos según diferentes criterios, facilitando su posterior análisis.</p>
+        
+        <!-- Ejemplo de código -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg mb-8">
+            <pre class="text-sm text-gray-800">
+<code>
+# Código de segmentación de datos
+def segmentar_datos(datos):
+    segmentos = {}
+    for dato in datos:
+        if dato['criterio'] not in segmentos:
+            segmentos[dato['criterio']] = []
+        segmentos[dato['criterio']].append(dato)
+    return segmentos
+</code>
+            </pre>
+        </div>
+
+        <p class="text-lg text-gray-700 max-w-full">El código anterior muestra cómo segmentar los datos según un criterio específico. Este proceso ayuda a dividir los datos en grupos, lo que facilita el análisis de cada grupo de forma independiente y proporciona información más detallada.</p>
+    </section>
+</section>
+</section>
+
+<!-- Parametria de fintech-->
+    <section id="parametria-fintech">
+            <div class="max-w-7xl mx-auto px-8">
+                <h3 class="text-3xl font-semibold text-blue-600 mb-8">Parametria - Fintech</h3>
+                <p class="text-lg text-gray-600 mb-8">Aquí encontrarás el listado de Jobs con su correspondiente ID, tabla y descripción proporcionada por el negocio.</p>
+            </div>
+    </section>
+    
+    <section id="encuestas-fintech">
+        <!-- Contenido de "Paso a paso para envío de encuestas" para Fintech -->
+    </section>
+    
+    <section id="migrados-commerce">
+        <div class="max-w-7xl mx-auto px-8">
+            <h3 class="text-3xl font-semibold text-blue-600 mb-6">Universos Migrados - Commerce</h3>
+            <p class="text-lg text-gray-600">
+            <!-- Tabla de Jobs -->
+<section class="max-w-7xl mx-auto py-16 px-6">
+    <h3 class="text-3xl font-bold text-gray-700 mb-6 text-center">Lista de Jobs</h3>
+    <div class="overflow-x-auto">
+        <table class="min-w-full table-auto border-collapse border border-gray-200">
+            <thead class="bg-blue-600 text-white">
+                <tr>
+                    <th class="px-6 py-3 text-left">JOB ID</th>
+                    <th class="px-6 py-3 text-left">JOB NAME</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">280517</td>
+                    <td class="px-6 py-4">BT_CX_NPS_RELACIONAL_COMMERCE_SAMPLING</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">281218</td>
+                    <td class="px-6 py-4">BT_CX_NPS_LOYALTY_SAMPLING</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">281293</td>
+                    <td class="px-6 py-4">BT_CX_NPS_1PPL_SAMPLING</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">281632</td>
+                    <td class="px-6 py-4">BT_CX_NPS_CHEDRAUI_SAMPLING</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">278414</td>
+                    <td class="px-6 py-4">PROXIMO VIS</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">278864</td>
+                    <td class="px-6 py-4">PROXIMO Mercado Shops </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">279253</td>
+                    <td class="px-6 py-4">PROXIMO CBT MARKETPLACE </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">280026</td>
+                    <td class="px-6 py-4"> PROXIMO PADS</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">279382</td>
+                    <td class="px-6 py-4">PROXIMO SUPER</td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-6 py-4">279382</td>
+                    <td class="px-6 py-4">PROXIMO PONDERADO MARKETPLACE</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+    
+    <section id="documentacion-commerce">
+        <!-- Contenido de "Documentación Técnica" para Commerce -->
+    </section>
+    
+    <section id="metricas-commerce">
+        <!-- Contenido de "Métricas de negocio" para Commerce -->
+    </section>
+    
+    <section id="encuestas-commerce">
+        <!-- Contenido de "Paso a paso para envío de encuestas" para Commerce -->
+    </section>
+    
     <!-- User Manual Section -->
-    <section class="max-w-6xl mx-auto py-16 px-6 text-center">
+    <section id="manual-usuario" class="max-w-6xl mx-auto py-16 px-6 text-center">
         <h3 class="text-3xl font-bold text-gray-700 mb-6">Manual de usuario</h3>
         <p class="text-gray-500">Accede rápidamente a temas de ayuda y soporte.</p>
         <div class="flex flex-wrap justify-center gap-8 mt-8">
@@ -85,5 +404,24 @@
             <button class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">Site Oficial del equipo</button>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); // Evita el comportamiento predeterminado
+                    const targetId = link.getAttribute("href").substring(1); // Obtiene el ID de destino
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
