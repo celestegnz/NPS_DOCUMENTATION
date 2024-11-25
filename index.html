@@ -18,18 +18,23 @@
 /* Estilo para la burbuja flotante */
 .contact-bubble {
     position: fixed; /* Hace que se quede fija en la pantalla */
-    top: 20px; /* Distancia desde la parte superior */
+    bottom: 20px; /* Distancia desde la parte inferior (en lugar de 'top') */
     right: 20px; /* Distancia desde el borde derecho */
     background-color: #3498db; /* Color de fondo */
     color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
+    padding: 12px 20px; /* Espaciado interno */
     border-radius: 50px; /* Bordes redondeados */
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
     cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: transform 0.3s ease-in-out; /* Animación de hover */
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out; /* Animación de hover */
     z-index: 50; /* Asegura que la burbuja esté encima del contenido */
+    display: flex; /* Usado para alinear texto de forma más fácil */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    min-width: 200px; /* Ancho mínimo para asegurar que el texto no se "pegue" a los bordes */
+    text-align: center; /* Centra el texto */
 }
 
 .hero-section {
@@ -89,238 +94,423 @@
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-700">
-  <!-- Burbuja flotante -->
-  <div class="contact-bubble">
-    <a href="#manual-usuario" style="color: white; text-decoration: none;">¿Necesitas contactarnos?</a>
-</div>
+    <!-- Burbuja flotante -->
+    <div class="contact-bubble" style="background-color: #005EB8;">
+        <a href="#manual-usuario" style="color: white; text-decoration: none;">¿Necesitas contactarnos?</a>
+    </div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-800 to-blue-300 text-white py-12 relative">
+    <section class="bg-gradient-to-br from-[#005EB8] to-[#A7C6ED] text-white py-12 relative">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-5xl font-extrabold">Welcome to Our Documentation</h2>
-            <p class="mt-2 text-1xl">A&DS CX</p>
-            <p class="mt-2 text-lg text-sm max-w-3xl mx-auto">Our mission is to turn data into insights that guide each team in transforming customer service into unforgettable experiences...</p>
+            <p class="mt-2 text-xl">A&DS CX</p>
+            <p class="mt-2 text-sm max-w-3xl mx-auto">Our mission is to turn data into insights that guide each team in transforming customer service into unforgettable experiences...</p>
         </div>
     </section>
-    
 <!-- Metrics Section -->
 <section class="max-w-6xl mx-auto py-12 px-6 text-center">
     <h3 class="text-2xl font-bold text-gray-700 mb-6">Our metrics tell the story</h3>
-    <div class="flex flex-wrap justify-center gap-8">
+    <div class="flex flex-wrap justify-center gap-8 relative">
         <!-- Cuadro de "101 Jobs Reestructurados" con icono sobre él -->
         <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
             <!-- Icono flotante -->
-            <img src="Meli - Presets 27.png" alt="Icono 1" class="icono-img w-20 h-12 object-contain animate-move">
+            <img src="Meli - Presets 27.png" alt="Icono 1" class="icono-img w-20 h-12 object-contain">
             <p class="text-3xl font-bold text-blue-600">101</p>
             <p class="text-gray-500 mt-2">Restructured Jobs</p>
         </div>
-        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105">
+        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
             <p class="text-3xl font-bold text-blue-600">45</p>
             <p class="text-gray-500 mt-2">Migrated Jobs</p>
         </div>
-        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105">
+        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
             <p class="text-3xl font-bold text-blue-600">+35</p>
             <p class="text-gray-500 mt-2">Restructured Universes</p>
         </div>
     </div>
 </section>
-
     <!-- Focused Sections for Fintech and Commerce -->
-    <section id="fintech" class="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 gap-16 px-8">
-        <!-- Fintech Universe -->
+    <section id="fintech" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 px-8">
         <div class="bg-white p-10 rounded-lg shadow-lg text-center">
             <h3 class="text-4xl font-semibold text-blue-600 mb-6">Universo NPS - Fintech</h3>
             <p class="text-lg text-gray-500 mb-6">Explora la documentación y herramientas clave de Fintech.</p>
-            <div class="mt-8 space-y-5">
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#migrados-fintech">Universos Migrados</a>
-                </button>
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#parametria-fintech">Gsheet de parametría</a></button>
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#documentacion-fintech">Documentación Técnica</a></button>
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#encuestas-fintech">Paso a paso para envío de encuestas</a></button>
-            </div>
+            <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#migrados-fintech">Universos Migrados</a></button>
         </div>
     
-        <!-- Commerce Universe -->
         <div class="bg-white p-10 rounded-lg shadow-lg text-center">
             <h3 class="text-4xl font-semibold text-blue-600 mb-6">Universo NPS - Commerce</h3>
             <p class="text-lg text-gray-500 mb-6">Accede a la información principal para el área de Commerce.</p>
-            <div class="mt-8 space-y-5">
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#migrados-commerce">Universos Migrados</a></button>
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#metricas-commerce">Gsheet de parametría</a></button>
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#documentacion-commerce">Documentación Técnica</a></button>
-                <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#encuestas-commerce">Paso a paso para envío de encuestas</a></button>
-            </div>
+            <button class="bg-blue-50 text-blue-600 py-4 w-full rounded-md hover:bg-blue-100 text-xl font-semibold"><a href="#migrados-commerce">Universos Migrados</a></button>
         </div>
     </section>
-    
+<!-- Botones Comunes -->
+<section class="max-w-7xl mx-auto py-12 px-6 text-center">
+    <h3 class="text-2xl font-bold text-gray-700 mb-6">Accede a la documentación general</h3>
+    <div class="mt-8 flex flex-wrap justify-center gap-5"> <!-- Cambiado a flex -->
+        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
+            <a href="#Codificacion">Job general y parametría</a>
+        </button>
+        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
+            <a href="#envio-encuestas">Paso a paso para envío de encuestas</a>
+        </button>
+        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
+            <a href="#documentacion-tecnica">Documentación Técnica</a>
+        </button>
+        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
+            <a href="#FAQ">FAQs</a>
+        </button>
+    </div>
+</section>
 
-<!-- Línea de separación entre bloques de botones y contenido -->
-<div class="border-t-8 border-blue-600 my-5 w-full"></div>
+<!-- division -->
+<div class="my-1 w-full">
+    <div class="bg-blue-600 h-2 rounded-full transition-opacity duration-300 ease-in-out opacity-50 hover:opacity-100"></div>
+</div>
+
 <!-- Contenido de "Universos Migrados" para Fintech -->
 <section id="migrados-fintech" class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-8">
         <h3 class="text-3xl font-semibold text-blue-600 mb-8">Universos Migrados - Fintech</h3>
-        <p class="text-lg text-gray-600 mb-8">Aquí encontrarás el listado de Jobs con su correspondiente ID, tabla y descripción proporcionada por el negocio.</p>
+        <p class="text-1lg text-gray-600 mb-8">Aquí se detallan los diferentes muestreos realizados en Fintech. Para más detalles sobre cada muestreo, consulta las descripciones del negocio.</p>
 
-        <!-- Lista de Jobs - Tabla -->
+
+    <!-- Tabla de Muestreos -->
+    <section class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-auto border-collapse border border-gray-200">
+                <thead class="bg-blue-600 text-white">
+                    <tr>
+                        <th class="px-3 py-2 text-left">Muestreo</th>
+                        <th class="px-3 py-2 text-left">Job ID</th>
+                        <th class="px-3 py-2 text-left">Nombre de la Tabla</th>
+                        <th class="px-3 py-2 text-left">Descripción del Negocio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo NPS Relacional </td>
+                        <td class="px-3 py-2">64498</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Proximity </td>
+                        <td class="px-3 py-2">278204</td>
+                        <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_HISTORICA</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo TC </td>
+                        <td class="px-3 py-2">272944</td>
+                        <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Conta Turbinada</td>
+                        <td class="px-3 py-2">272469</td>
+                        <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_HISTORICA</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Merchant Credits</td>
+                        <td class="px-3 py-2">278414</td>
+                        <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_HISTORICA</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Money Out (efectivo y virtual) </td>
+                        <td class="px-3 py-2">278864</td>
+                        <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_EF_HISTORICA</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Money In (efectivo y virtual)</td>
+                        <td class="px-3 py-2">279253</td>
+                        <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_HISTORICA</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2"> Muestreo Consumer Credits</td>
+                        <td class="px-3 py-2">280026</td>
+                        <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_SAMPLING</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Cards</td>
+                        <td class="px-3 py-2">279382</td>
+                        <td class="px-3 py-2">BT_CX_NPS_CARDS_SAMPLING</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Portabilidad </td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo OP Buyers </td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo MP </td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2">
+                                <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                            </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Remesas </td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Churn </td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+<!--Sección de commerce-->
+<section id="migrados-commerce" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-8">
+        <h3 class="text-3xl font-semibold text-blue-600 mb-8">Universos Migrados - Commerce</h3>
+        <p class="text-lg text-gray-600 mb-8">Aquí se detallan los diferentes muestreos realizados en Fintech. Para más detalles sobre cada muestreo, consulta las descripciones del negocio.</p>
+
+
+    <!-- Tabla de Muestreos -->
+    <section class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-auto border-collapse border border-gray-200">
+                <thead class="bg-blue-600 text-white">
+                    <tr>
+                        <th class="px-3 py-2 text-left">Muestreo</th>
+                        <th class="px-3 py-2 text-left">Job ID</th>
+                        <th class="px-3 py-2 text-left">Nombre de la Tabla</th>
+                        <th class="px-3 py-2 text-left">Descripción del Negocio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo NPS Relacional </td>
+                        <td class="px-3 py-2">280517</td>
+                        <td class="px-3 py-2">BT_CX_NPS_RELACIONAL_COMMERCE_SAMPLING</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo NPS Loyalty </td>
+                        <td class="px-3 py-2">281218</td>
+                        <td class="px-3 py-2">BT_CX_NPS_LOYALTY_SAMPLING</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo NPS 1PPL </td>
+                        <td class="px-3 py-2">281293</td>
+                        <td class="px-3 py-2">BT_CX_NPS_1PPL_SAMPLING</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo NPS Chedraui </td>
+                        <td class="px-3 py-2">281632</td>
+                        <td class="px-3 py-2">BT_CX_NPS_CHEDRAUI_SAMPLING</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo VIS</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo Mercado Shops</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo CBT Marketplace</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo PADS</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo SUPER</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo PONDERADO MARKETPLACE</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">
+                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+
+<!-- Division general-->
+<div class="flex items-center my-5">
+    <div class="flex-grow border-t-2 border-blue-600"></div>
+    <span class="mx-3 text-blue-600 font-semibold">Sección Compartida</span>
+    <div class="flex-grow border-t-2 border-blue-600"></div>
+</div>
+
+<!-- Documentación Técnica -->
+<section id="Codificacion" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-8">
+        <h3 class="text-3xl font-semibold text-blue-600 mb-8">Job general y parametría</h3>
+        <p class="text-lg text-gray-600 mb-8">En esta sección podrás ver un ejemplo común para la mayoría de los universos. Podrás ver el proceso de ejecución de cada Step.</p>
+        <p> Al final, encuentras la sección para ver el gsheet de parametría. Accede al archivo haciendo click aquí.</p>
         <section class="bg-white p-6 rounded-lg shadow-lg">
-            <h4 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Lista de Jobs Migrados</h4>
-            <div class="overflow-x-auto">
-                <table class="min-w-full table-auto border-collapse border border-gray-200">
-                    <thead class="bg-blue-600 text-white text-sm">
-                        <tr>
-                            <th class="px-4 py-3 text-left">JOB ID</th>
-                            <th class="px-4 py-3 text-left">JOB NAME</th>
-                            <th class="px-4 py-3 text-left">TABLE NAME</th>
-                            <th class="px-4 py-3 text-left">DESCRIPTION</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">278204</td>
-                            <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_SAMPLING</td>
-                            <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">272944</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_SAMPLING</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">272469</td>
-                            <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_SAMPLING</td>
-                            <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">278414</td>
-                            <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_SAMPLING</td>
-                            <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">278864</td>
-                            <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_SAMPLING (efectivo y virtual)</td>
-                            <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_EF_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">279253</td>
-                            <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_SAMPLING (efectivo y virtual)</td>
-                            <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">280026</td>
-                            <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_SAMPLING</td>
-                            <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">279382</td>
-                            <td class="px-3 py-2">BT_CX_NPS_CARDS_SAMPLING</td>
-                            <td class="px-3 py-2">BT_CX_NPS_CARDS_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">64498</td>
-                            <td class="px-3 py-2">PROXIMO Relacional (individuos, teens, newbies)</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">224417</td>
-                            <td class="px-3 py-2">PROXIMO Portabilidad</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">224417</td>
-                            <td class="px-3 py-2">PROXIMO OP buyers</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">224417</td>
-                            <td class="px-3 py-2">PROXIMO MP</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">224417</td>
-                            <td class="px-3 py-2">PROXIMO Remesas</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">224417</td>
-                            <td class="px-3 py-2">PROXIMO Churn</td>
-                            <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                            <td class="px-3 py-2">Descripción pendiente de negocio</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Imagen de DataFlow -->
+            <div class="text-center mb-8">
+                <img src="DF Proximity.png" alt="DataFlow Diagram" class="max-w-4xl h-auto rounded-lg shadow-lg mx-auto">
+            </div>
+
+            <!-- Step 1 -> WAIT -->
+            <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #1 -> WAIT</h4>
+                <p class="text-lg text-gray-700 max-w-full">En este paso, se define el periodo de espera para que las tablas necesarias estén actualizadas. Este paso es crucial para garantizar que los datos estén completamente cargados antes de continuar con el procesamiento.</p>
+            </section>
+
+            <!-- Step 2 -> Query Segmentación -->
+            <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #2 -> Query Segmentación</h4>
+                <p class="text-lg text-gray-700 max-w-full">En esta sección se describe el proceso de segmentación de los datos utilizados para la muestra NPS. El código de segmentación permite organizar los datos según diferentes criterios, facilitando su posterior análisis. Este proceso ayuda a dividir los datos en grupos, lo que facilita el análisis de cada grupo de forma independiente y proporciona información más detallada.</p>
+                <div class="text-center mb-8">
+                    <img src="Ejemplo.png" alt="DataFlow Diagram" class="max-w-4xl h-auto rounded-lg shadow-lg mx-auto">
+                </div>
+            </section>
+
+            <!-- Step 3 -> Query Muestreo -->
+            <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #3 -> Muestreo</h4>
+                <p class="text-lg text-gray-700 max-w-full">El código de muestreo es responsable de organizar y seleccionar un subconjunto de datos representativo, con el fin de obtener una muestra que refleje con precisión las características generales de un conjunto de datos más grande. Este proceso es clave para realizar análisis eficaces sin necesidad de procesar toda la información disponible, lo que podría ser costoso o innecesario.</p>
+                
+                <!-- Ejemplo de código -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg mb-8">
+                    <pre class="text-xs text-gray-800">
+<code>
+query_param =f""" 
+SELECT * FROM meli-bi-data.WHOWNER.LK_CX_NPS_PARAMETRIZACION WHERE UNIVERSE = '{universe}'
+"""
+    
+universe_params = bq_gaia.query_to_df(query=query_param)
+    
+e_code_columns = universe_params['E_CODE_COLUMNS'].str.cat(sep=',').split(',')
+concat_expression = "CONCAT(" + ", '_', ".join([f"COALESCE({col}, '')" for col in e_code_columns]) + ")"
+    
+query = f"""
+    CREATE OR REPLACE TABLE {sample_table} AS (
+    WITH 
+    {concat_expression} AS PREV_ECODE,
+    [...]
+    SELECT
+        E.SIT_SITE_ID,
+        PREV_ECODE as E_CODE,
+    [...] -> resto de columnas
+    FROM STG_CX_NPS_PRECAP E
+    LEFT JOIN meli-bi-data.WHOWNER.LK_CX_NPS_PARAMETRIZACION P
+        ON E.PREV_ECODE = P.E_CODE 
+        AND P.UNIVERSE_CAPS = '{universe}'
+    LEFT JOIN HISTORICAL DW 
+        ON E.CUS_CUST_ID = DW.CUS_CUST_ID 
+        AND DW.SAMPLE_DATE < DATE_SUB(CURRENT_DATE(), INTERVAL CAST(P.SURVEY_FREQUENCY AS INT64) DAY)
+    INNER JOIN meli-bi-data.WHOWNER.LK_KYC_VAULT_USER v on E.CUS_CUST_ID = v.cus_cust_id
+        WHERE 
+        RN<= CAP
+    );
+    """
+bq_gaia.execute_query(query=query)
+        </code>
+        </pre>
+    </div>
+</section>
+
+            <!-- Step 4 -> Insert -->
+            <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+                <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #4 -> Insert</h4>
+                <p class="text-lg text-gray-700 max-w-full">Se inserta la información de la tabla staging generada en el muestreo a la tabla productiva TBL.</p>
+            </section>
+<!-- Parametría -->
+
+        <h2 class="text-3xl font-semibold text-blue-600 mb-8">Parametría</h2>
+        <p class = "text-1lg mb-2">¿Cómo debería cambiar los CAPS? ¿Cómo debería agregar un nuevo universo? ¡Mira el video!</p>
+        
+        <!-- Contenedor del video centrado -->
+        <section class="bg-white p-6 rounded-lg shadow-lg mt-8">
+            <div class="video-section w-full max-w-3xl mx-auto bg-gray-100 py-8">
+                <video controls class="max-w-full rounded-lg shadow-lg">
+                    <source src="Caps.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
             </div>
         </section>
-
-
-<!-- Documentación Técnica Fintech -->
-<section id="documentacion-fintech" class="bg-gray-50 py-16">
-    <div class="max-w-7xl mx-auto px-8">
-        <h3 class="text-3xl font-semibold text-blue-600 mb-8">Documentación Técnica</h3>
-        <p class="text-lg text-gray-600 mb-8">En esta sección se explica detalladamente el flujo de trabajo, la segmentación, el proceso de muestreo y otros aspectos técnicos clave de NPS en el contexto Fintech. A continuación, encontrarás capturas de pantalla, ejemplos de código y explicaciones paso a paso.</p>
     </div>
-<section class="bg-white p-6 rounded-lg shadow-lg">
-    <!-- Imagen de DataFlow -->
-    <div class="text-center mb-8">
-        <img src="DF.png" alt="DataFlow Diagram" class="max-w-3xl h-auto rounded-lg shadow-lg mx-auto">
-    </div>
-
-    <!-- Step 1 -> WAIT -->
-    <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
-        <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #1 -> WAIT</h4>
-        <p class="text-lg text-gray-700 max-w-full">En este paso, se define el periodo de espera para que las tablas necesarias estén actualizadas. Este paso es crucial para garantizar que los datos estén completamente cargados antes de continuar con el procesamiento.</p>
-    </section>
-
-    <!-- Step 2 -> Query Segmentación -->
-    <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-12">
-        <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #2 -> Query Segmentación</h4>
-        <p class="text-lg text-gray-700 max-w-full">En esta sección se describe el proceso de segmentación de los datos utilizados para la muestra NPS. El código de segmentación permite organizar los datos según diferentes criterios, facilitando su posterior análisis.</p>
-        
-        <!-- Ejemplo de código -->
-        <div class="bg-gray-100 p-6 rounded-lg shadow-lg mb-8">
-            <pre class="text-sm text-gray-800">
-<code>
-# Código de segmentación de datos
-def segmentar_datos(datos):
-    segmentos = {}
-    for dato in datos:
-        if dato['criterio'] not in segmentos:
-            segmentos[dato['criterio']] = []
-        segmentos[dato['criterio']].append(dato)
-    return segmentos
-</code>
-            </pre>
-        </div>
-
-        <p class="text-lg text-gray-700 max-w-full">El código anterior muestra cómo segmentar los datos según un criterio específico. Este proceso ayuda a dividir los datos en grupos, lo que facilita el análisis de cada grupo de forma independiente y proporciona información más detallada.</p>
-    </section>
 </section>
-</section>
-
-<!-- Parametria de fintech-->
-    <section id="parametria-fintech" class="bg-gray-50 py-16">
-            <div class="max-w-7xl mx-auto px-8">
-                <h3 class="text-3xl font-semibold text-blue-600 mb-8">Parametria - Fintech</h3>
-                <p class="text-lg text-gray-600 mb-8">Gsheet .</p>
-            </div>
-            <section class="bg-white p-6 rounded-lg shadow-lg">
-            </section>
-            
-    </section>
     
-    <section id="encuestas-fintech"class="bg-gray-50 py-16">
+    <section id="envio-encuestas" class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-8">
             <h3 class="text-3xl font-semibold text-blue-600 mb-8">Paso a paso para el envío de encuestas</h3>
             <p class="text-lg text-gray-600 mb-8">¿Necesitas entender el paso a paso de cómo se hace el envío de encuestas o necesitas hacer envíos adhoc? Mira nuestro instructivo.</p>
@@ -328,90 +518,102 @@ def segmentar_datos(datos):
         <section class="bg-white p-6 rounded-lg shadow-lg">
         </section>
     </section>
-    
-    <section id="migrados-commerce">
-        <div class="max-w-7xl mx-auto px-8">
-            <h3 class="text-3xl font-semibold text-blue-600 mb-6">Universos Migrados - Commerce</h3>
-            <p class="text-lg text-gray-600">
-            <!-- Tabla de Jobs -->
-<section class="max-w-7xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold text-gray-700 mb-6 text-center">Lista de Jobs</h3>
-    <div class="overflow-x-auto">
-        <table class="min-w-full table-auto border-collapse border border-gray-200">
-            <thead class="bg-blue-600 text-white">
-                <tr>
-                    <th class="px-6 py-3 text-left">JOB ID</th>
-                    <th class="px-6 py-3 text-left">JOB NAME</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">280517</td>
-                    <td class="px-6 py-4">BT_CX_NPS_RELACIONAL_COMMERCE_SAMPLING</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">281218</td>
-                    <td class="px-6 py-4">BT_CX_NPS_LOYALTY_SAMPLING</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">281293</td>
-                    <td class="px-6 py-4">BT_CX_NPS_1PPL_SAMPLING</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">281632</td>
-                    <td class="px-6 py-4">BT_CX_NPS_CHEDRAUI_SAMPLING</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">278414</td>
-                    <td class="px-6 py-4">PROXIMO VIS</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">278864</td>
-                    <td class="px-6 py-4">PROXIMO Mercado Shops </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">279253</td>
-                    <td class="px-6 py-4">PROXIMO CBT MARKETPLACE </td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">280026</td>
-                    <td class="px-6 py-4"> PROXIMO PADS</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">279382</td>
-                    <td class="px-6 py-4">PROXIMO SUPER</td>
-                </tr>
-                <tr class="bg-white border-b hover:bg-gray-100">
-                    <td class="px-6 py-4">279382</td>
-                    <td class="px-6 py-4">PROXIMO PONDERADO MARKETPLACE</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    </section>
-    
-    <section id="documentacion-commerce">
-        <!-- Contenido de "Documentación Técnica" para Commerce -->
-    </section>
-    
-    <section id="metricas-commerce">
-        <!-- Contenido de "Métricas de negocio" para Commerce -->
-    </section>
-    
-    <section id="encuestas-commerce">
-        <!-- Contenido de "Paso a paso para envío de encuestas" para Commerce -->
-    </section>
-    
+
+        <section id="FAQ" class="max-w-6xl mx-auto py-12 px-6">
+            <h3 class="text-2xl font-bold text-gray-700 mb-6 text-center">Preguntas Frecuentes (FAQs)</h3>
+            <div class="space-y-6">
+                <!-- Pregunta 1 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold text-blue-600">¿Qué es la segmentación?</h4>
+                    <p class="text-gray-700 mt-2">Consiste en dividir un conjunto de datos en grupos o categorías basados en criterios específicos. Su objetivo es permitir un análisis más enfocado y detallado de cada segmento.</p>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold text-blue-600">¿Qué es el muestreo?</h4>
+                    <p class="text-gray-700 mt-2">Proceso de seleccionar una muestra representativa de un conjunto de datos más grande para realizar análisis.</p>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold text-blue-600">¿Por qué se realizó la migración?</h4>
+                    <p class="text-gray-700 mt-2">Migrar datos de un universo de un sandbox a un datamesh implica mover los datos hacia una arquitectura descentralizada, donde los dominios responsables de los datos gestionan y optimizan su propio almacenamiento y acceso. El objetivo de esta migración es permitir que cada equipo o unidad dentro de la organización controle sus propios datos de manera más autónoma, al mismo tiempo que se mejora la escalabilidad y la eficiencia, y se facilita el acceso a los datos de forma segura y en tiempo real.</p>
+                </div>
+            </div>
+        </section>
     <!-- User Manual Section -->
     <section id="manual-usuario" class="max-w-6xl mx-auto py-16 px-6 text-center">
         <h3 class="text-3xl font-bold text-gray-700 mb-6">Manual de usuario</h3>
         <p class="text-gray-500">Accede rápidamente a temas de ayuda y soporte.</p>
         <div class="flex flex-wrap justify-center gap-8 mt-8">
-            <button class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">¿Cómo accedo a DataSuite?</button>
-            <button class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">¿Cómo cargo un Ticket?</button>
-            <button class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">Site Oficial del equipo</button>
+            <button onclick="toggleContent('content1')" class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">¿Cómo accedo a DataSuite?</button>
+            <button onclick="toggleContent('content2')" class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">¿Cómo cargo un Ticket?</button>
+            <button onclick="window.open('https://sites.google.com/mercadolibre.com/analyticsdatasciencecx/home?authuser=0', '_blank')" class="bg-blue-50 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-100 text-lg font-semibold">Site Oficial del equipo</button>
+        </div>
+    
+        <!-- Contenido desplegable -->
+        <div class="mt-4">
+            <div id="content1" class="hidden bg-blue-50 p-4 rounded-md shadow-md">
+                <p class="text-gray-700">Para acceder a DataSuite, primero debes iniciar sesión con tus credenciales. Si no tienes una cuenta, puedes registrarte desde la página principal.</p>
+            </div>
+            <div id="content2" class="hidden bg-blue-50 p-4 rounded-md shadow-md">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">¿Cómo acceder y utilizar el sistema de tickets?</h2>
+            
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">1. ¿Qué es un Ticket de Incidencia?</h3>
+                    <p class="text-gray-700">Un ticket de incidencia se utiliza para reportar problemas o fallos en el sistema, plataforma o procesos. Por ejemplo, si hay errores en un dashboard, un dato incorrecto, o cualquier inconveniente que afecte la operación.</p>
+                </div>
+            
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">2. ¿Qué es un Ticket de Solicitud?</h3>
+                    <p class="text-gray-700">Un ticket de solicitud se utiliza cuando se requieren cambios en elementos ya cerrados o configuraciones anteriores, como modificaciones de dashboards o mejoras que no son urgentes pero sí necesarias.</p>
+                </div>
+            
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">¿Cómo accedo? Comencemos!</h3>
+                    <p class="mt-2">
+                        <a href="https://mercadolibre.atlassian.net/servicedesk/customer/portal/2728/group/-1" class="text-blue-600 hover:underline">Accede aquí para crear un ticket.</a>
+                    </p>
+                </div>
+            
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Instrucciones en Video</h3>
+                    <p class="text-gray-700">A continuación, se incluye un video que te guiará a través del proceso:</p>
+                    <video class="w-full rounded-md" controls>
+                        <source src="Jira.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
         </div>
     </section>
+    
+
+<script>
+    function toggleContent(contentId) {
+        const content = document.getElementById(contentId);
+        
+        // Alternar la clase 'hidden'
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden'); // Mostrar contenido
+        } else {
+            content.classList.add('hidden'); // Ocultar contenido
+        }
+
+        // También ocultar el otro contenido si se está mostrando
+        const otherContentId = contentId === 'content1' ? 'content2' : 'content1';
+        const otherContent = document.getElementById(otherContentId);
+        if (!otherContent.classList.contains('hidden')) {
+            otherContent.classList.add('hidden'); // Ocultar el otro contenido
+        }
+    }
+</script>
+    
+    <style>
+        /* Estilo opcional para la transición */
+        .hidden {
+            display: none;
+        }
+    </style>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const links = document.querySelectorAll('a[href^="#"]');
