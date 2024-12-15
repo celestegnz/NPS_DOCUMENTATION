@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -107,26 +109,30 @@
         </div>
     </section>
 <!-- Metrics Section -->
-<section class="max-w-6xl mx-auto py-12 px-6 text-center">
-    <h3 class="text-2xl font-bold text-gray-700 mb-6">Our metrics tell the story</h3>
-    <div class="flex flex-wrap justify-center gap-8 relative">
-        <!-- Cuadro de "101 Jobs Reestructurados" con icono sobre él -->
-        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
+<section class="max-w-6xl mx-auto py-8 px-4 text-center">
+    <h3 class="text-xl font-bold text-gray-700 mb-4">Our metrics tell the story</h3>
+    <div class="flex flex-wrap justify-center gap-6 relative">
+        <!-- Cuadro de "101 Jobs Reestructurados" -->
+        <div class="bg-blue-100 p-4 rounded-lg shadow-md w-28 transform transition-transform duration-300 hover:scale-105 relative">
             <!-- Icono flotante -->
-            <img src="Meli - Presets 27.png" alt="Icono 1" class="icono-img w-20 h-12 object-contain">
-            <p class="text-3xl font-bold text-blue-600">101</p>
-            <p class="text-gray-500 mt-2">Restructured Jobs</p>
+            <img src="Meli - Presets 27.png" alt="Icono 1" class="icono-img w-12 h-8 object-contain">
+            <p class="text-2xl font-bold text-blue-600">101</p>
+            <p class="text-sm text-gray-500 mt-1">Restructured Jobs</p>
         </div>
-        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
-            <p class="text-3xl font-bold text-blue-600">45</p>
-            <p class="text-gray-500 mt-2">Migrated Jobs</p>
+        <!-- Cuadro de "45 Jobs Migrados" -->
+        <div class="bg-blue-100 p-4 rounded-lg shadow-md w-28 transform transition-transform duration-300 hover:scale-105 relative">
+            <p class="text-2xl font-bold text-blue-600">45</p>
+            <p class="text-sm text-gray-500 mt-1">Migrated Jobs</p>
         </div>
-        <div class="bg-blue-100 p-6 rounded-lg shadow-lg w-32 transform transition-transform duration-300 hover:scale-105 relative">
-            <p class="text-3xl font-bold text-blue-600">+35</p>
-            <p class="text-gray-500 mt-2">Restructured Universes</p>
+        <!-- Cuadro de "+35 Universes" -->
+        <div class="bg-blue-100 p-4 rounded-lg shadow-md w-28 transform transition-transform duration-300 hover:scale-105 relative">
+            <p class="text-2xl font-bold text-blue-600">+35</p>
+            <p class="text-sm text-gray-500 mt-1">Restructured Universes</p>
         </div>
     </div>
 </section>
+
+
     <!-- Focused Sections for Fintech and Commerce -->
     <section id="fintech" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 px-8">
         <div class="bg-white p-10 rounded-lg shadow-lg text-center">
@@ -142,27 +148,46 @@
         </div>
     </section>
 <!-- Botones Comunes -->
-<section class="max-w-7xl mx-auto py-12 px-6 text-center">
-    <h3 class="text-2xl font-bold text-gray-700 mb-6">Accede a la documentación general</h3>
-    <div class="mt-8 flex flex-wrap justify-center gap-5"> <!-- Cambiado a flex -->
-        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
-            <a href="#Codificacion"> Job modelo y parametría</a>
-        </button>
-        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
-            <a href="#envio-encuestas">Envío de encuestas</a>
-        </button>
-        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
-            <a href="#Beneficios">Beneficios obtenidos</a>
-        </button>
-        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
-            <a href="#documentacion-tecnica">Documentación Técnica</a>
-        </button>
-        <button class="bg-blue-50 text-blue-600 py-4 w-1/4 rounded-md hover:bg-blue-100 text-xl font-semibold shadow-lg">
-            <a href="#FAQ">FAQs</a>
-        </button>
+<section class="max-w-7xl mx-auto py-8 px-6 text-center">
+    <h3 class="text-xl font-bold text-gray-700 mb-6">Accede a la documentación general</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"> <!-- Ajuste en columnas y espacios -->
+        <!-- Botón 1 -->
+        <div class="bg-white p-4 rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#Codificacion" class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2910/2910761.png" alt="Icono Job" class="w-8 h-8 mb-2"> <!-- Icono más pequeño -->
+                <h4 class="text-blue-600 text-sm font-medium">Job modelo y parametría</h4> <!-- Texto más pequeño -->
+            </a>
+        </div>
+        <!-- Botón 2 -->
+        <div class="bg-white p-4 rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#envio-encuestas" class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/615/615075.png" alt="Icono Encuestas" class="w-8 h-8 mb-2">
+                <h4 class="text-blue-600 text-sm font-medium">Envío de encuestas</h4>
+            </a>
+        </div>
+        <!-- Botón 3 -->
+        <div class="bg-white p-4 rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#Beneficios" class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3819/3819635.png" alt="Icono Beneficios" class="w-8 h-8 mb-2">
+                <h4 class="text-blue-600 text-sm font-medium">Beneficios obtenidos</h4>
+            </a>
+        </div>
+        <!-- Botón 4 -->
+        <div class="bg-white p-4 rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#documentacion-tecnica" class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2936/2936701.png" alt="Icono Documentación" class="w-8 h-8 mb-2">
+                <h4 class="text-blue-600 text-sm font-medium">Documentación Técnica</h4>
+            </a>
+        </div>
+        <!-- Botón 5 -->
+        <div class="bg-white p-4 rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#FAQ" class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="Icono FAQ" class="w-8 h-8 mb-2">
+                <h4 class="text-blue-600 text-sm font-medium">FAQs</h4>
+            </a>
+        </div>
     </div>
 </section>
-
 
 <!-- division -->
 <div class="my-1 w-full">
@@ -181,124 +206,152 @@
         <div class="overflow-x-auto">
             <table class="min-w-full table-auto border-collapse border border-gray-200">
                 <thead class="bg-blue-600 text-white">
-                    <tr>
-                        <th class="px-3 py-2 text-left">Muestreo</th>
-                        <th class="px-3 py-2 text-left">Job ID</th>
-                        <th class="px-3 py-2 text-left">Nombre de la Tabla</th>
-                        <th class="px-3 py-2 text-left">Descripción del Negocio</th>
-                    </tr>
-                </thead>
-                <tbody>
+<tr>
+    <th class="px-3 py-2 text-left">Muestreo</th>
+    <th class="px-3 py-2 text-left">Job ID</th>
+    <th class="px-3 py-2 text-left">Nombre de la Tabla</th>
+    <th class="px-3 py-2 text-left">Descripción del Negocio</th>
+</tr>
+</thead>
+<tbody>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo NPS Relacional </td>
+                    <td class="px-3 py-2">64498</td>
+                    <td class="px-3 py-2">WIP</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo Proximity </td>
+                    <td class="px-3 py-2">278204</td>
+                    <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_HISTORICA</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo TC </td>
+                    <td class="px-3 py-2">272944</td>
+                    <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo Conta Turbinada</td>
+                    <td class="px-3 py-2">272469</td>
+                    <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_HISTORICA</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo Merchant Credits</td>
+                    <td class="px-3 py-2">278414</td>
+                    <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_HISTORICA</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo Money Out (efectivo y virtual) </td>
+                    <td class="px-3 py-2">278864</td>
+                    <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_EF_HISTORICA</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo Money In (efectivo y virtual)</td>
+                    <td class="px-3 py-2">279253</td>
+                    <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_HISTORICA</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="bg-white border-b hover:bg-gray-100">
+                    <td class="px-3 py-2">Muestreo Consumer Credits</td>
+                    <td class="px-3 py-2">280026</td>
+                    <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_SAMPLING</td>
+                    <td class="px-3 py-2 text-center">
+                        <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                            <i class="fas fa-search mr-2"></i>
+                        </a>
+                    </td>
+                </tr>
                     <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo NPS Relacional </td>
-                        <td class="px-3 py-2">64498</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Proximity </td>
-                        <td class="px-3 py-2">278204</td>
-                        <td class="px-3 py-2">BT_CX_NPS_PROXIMITY_MP_HISTORICA</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo TC </td>
-                        <td class="px-3 py-2">272944</td>
-                        <td class="px-3 py-2">BT_CX_NPS_TC_HISTORICA</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Conta Turbinada</td>
-                        <td class="px-3 py-2">272469</td>
-                        <td class="px-3 py-2">BT_CX_NPS_CONTA_TURBINADA_HISTORICA</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Merchant Credits</td>
-                        <td class="px-3 py-2">278414</td>
-                        <td class="px-3 py-2">BT_CX_NPS_MERCHANT_CREDITS_HISTORICA</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Money Out (efectivo y virtual) </td>
-                        <td class="px-3 py-2">278864</td>
-                        <td class="px-3 py-2">BT_CX_NPS_MONEY_OUT_EF_HISTORICA</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Money In (efectivo y virtual)</td>
-                        <td class="px-3 py-2">279253</td>
-                        <td class="px-3 py-2">BT_CX_NPS_MONEY_IN_HISTORICA</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2"> Muestreo Consumer Credits</td>
-                        <td class="px-3 py-2">280026</td>
-                        <td class="px-3 py-2">BT_CX_NPS_CONSUMER_CREDITS_SAMPLING</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Cards</td>
-                        <td class="px-3 py-2">279382</td>
-                        <td class="px-3 py-2">BT_CX_NPS_CARDS_SAMPLING</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        <td class="px-4 py-2">Muestreo Cards</td>
+                        <td class="px-4 py-2">279382</td>
+                        <td class="px-4 py-2">BT_CX_NPS_CARDS_SAMPLING</td>
+                        <td class="px-4 py-2">
+                            <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                <i class="fas fa-search"></i>
+                            </a>
                         </td>
                     </tr>
                     <tr class="bg-white border-b hover:bg-gray-100">
                         <td class="px-3 py-2">Muestreo Portabilidad </td>
                         <td class="px-3 py-2">WIP</td>
                         <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        <td class="px-3 py-2 text-center">
+                            <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                <i class="fas fa-search mr-2"></i>
+                            </a>
                         </td>
                     </tr>
                     <tr class="bg-white border-b hover:bg-gray-100">
                         <td class="px-3 py-2">Muestreo OP Buyers </td>
                         <td class="px-3 py-2">WIP</td>
                         <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        <td class="px-3 py-2 text-center">
+                            <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                <i class="fas fa-search mr-2"></i>
+                            </a>
                         </td>
                     </tr>
-                        <tr class="bg-white border-b hover:bg-gray-100">
-                            <td class="px-3 py-2">Muestreo MP </td>
-                            <td class="px-3 py-2">WIP</td>
-                            <td class="px-3 py-2">WIP</td>
-                            <td class="px-3 py-2">
-                                <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                            </td>
+                    <tr class="bg-white border-b hover:bg-gray-100">
+                        <td class="px-3 py-2">Muestreo MP </td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2">WIP</td>
+                        <td class="px-3 py-2 text-center">
+                            <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                <i class="fas fa-search mr-2"></i>
+                            </a>
+                        </td>
                     </tr>
                     <tr class="bg-white border-b hover:bg-gray-100">
                         <td class="px-3 py-2">Muestreo Remesas </td>
                         <td class="px-3 py-2">WIP</td>
                         <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        <td class="px-3 py-2 text-center">
+                            <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                <i class="fas fa-search mr-2"></i>
+                            </a>
                         </td>
                     </tr>
                     <tr class="bg-white border-b hover:bg-gray-100">
                         <td class="px-3 py-2">Muestreo Churn </td>
                         <td class="px-3 py-2">WIP</td>
                         <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
+                        <td class="px-3 py-2 text-center">
+                            <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                <i class="fas fa-search mr-2"></i>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
@@ -325,88 +378,88 @@
                         <th class="px-3 py-2 text-left">Nombre de la Tabla</th>
                         <th class="px-3 py-2 text-left">Descripción del Negocio</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo NPS Relacional </td>
-                        <td class="px-3 py-2">280517</td>
-                        <td class="px-3 py-2">BT_CX_NPS_RELACIONAL_COMMERCE_SAMPLING</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo NPS Loyalty </td>
-                        <td class="px-3 py-2">281218</td>
-                        <td class="px-3 py-2">BT_CX_NPS_LOYALTY_SAMPLING</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo NPS 1PPL </td>
-                        <td class="px-3 py-2">281293</td>
-                        <td class="px-3 py-2">BT_CX_NPS_1PPL_SAMPLING</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo NPS Chedraui </td>
-                        <td class="px-3 py-2">281632</td>
-                        <td class="px-3 py-2">BT_CX_NPS_CHEDRAUI_SAMPLING</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo VIS</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo Mercado Shops</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo CBT Marketplace</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo PADS</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo SUPER</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b hover:bg-gray-100">
-                        <td class="px-3 py-2">Muestreo PONDERADO MARKETPLACE</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">WIP</td>
-                        <td class="px-3 py-2">
-                            <a href="#" class="text-blue-600 font-semibold">Ver Descripción del Negocio</a>
-                        </td>
-                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo NPS Relacional</td>
+                            <td class="px-3 py-2">280517</td>
+                            <td class="px-3 py-2">BT_CX_NPS_RELACIONAL_COMMERCE_SAMPLING</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo NPS Loyalty</td>
+                            <td class="px-3 py-2">281218</td>
+                            <td class="px-3 py-2">BT_CX_NPS_LOYALTY_SAMPLING</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo NPS 1PPL </td>
+                            <td class="px-3 py-2">281293</td>
+                            <td class="px-3 py-2">BT_CX_NPS_1PPL_SAMPLING</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo NPS Chedraui </td>
+                            <td class="px-3 py-2">281632</td>
+                            <td class="px-3 py-2">BT_CX_NPS_CHEDRAUI_SAMPLING</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo VIS</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo CBT Marketplace</td>
+                            <td class="px-3 py-2">286078</td>
+                            <td class="px-3 py-2">meli-bi-data.WHOWNER.BT_CX_NPS_CBT_HISTORICA</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo PADS</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-100">
+                            <td class="px-3 py-2">Muestreo PONDERADO MARKETPLACE</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2">WIP</td>
+                            <td class="px-3 py-2 text-center">
+                                <a href="#" class="text-blue-600 font-semibold flex justify-center items-center" onclick="openModal('modal2')">
+                                    <i class="fas fa-search mr-2"></i>
+                                </a>
+                            </td>
+                        </tr>
                 </tbody>
             </table>
         </div>
@@ -425,7 +478,7 @@
     <div class="max-w-7xl mx-auto px-8">
         <h3 class="text-3xl font-semibold text-blue-600 mb-8">Job general y parametría</h3>
         <p class="text-lg text-gray-600 mb-8">En esta sección podrás ver un ejemplo común para la mayoría de los universos. Podrás ver el proceso de ejecución de cada Step.</p>
-        <p> Al final, encuentras la sección para ver el gsheet de parametría. Accede al archivo haciendo click aquí.</p>
+        <p>Al final, encuentras la sección para ver el gsheet de parametría. <a href="https://docs.google.com/spreadsheets/d/1WnDhPsu_t1QSUd37M_WtxBjobWxuJ7OhoW7-nhRj__o/edit?gid=1510732814#gid=1510732814" target="_blank" class="text-blue-500 hover:underline">Accede al archivo haciendo click aquí</a>.</p>
         <section class="bg-white p-6 rounded-lg shadow-lg">
             <!-- Imagen de DataFlow -->
             <div class="text-center mb-8">
@@ -517,11 +570,89 @@ bq_gaia.execute_query(query=query)
     <section id="envio-encuestas" class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-8">
             <h3 class="text-3xl font-semibold text-blue-600 mb-8">Paso a paso para el envío de encuestas</h3>
-            <p class="text-lg text-gray-600 mb-8">¿Necesitas entender el paso a paso de cómo se hace el envío de encuestas o necesitas hacer envíos adhoc? Mira nuestro instructivo.</p>
-        </div>
-        <section class="bg-white p-6 rounded-lg shadow-lg">
-        </section>
+            <p class="text-lg text-gray-600 mb-8">¿Necesitas entender cómo funciona el envío de encuestas?</p>
+            <section class="bg-white p-6 rounded-lg shadow-lg">
+                <!-- Imagen de DataFlow -->
+                <div class="text-center mb-8">
+                    <img src="Envio de enc.png" alt="DataFlow Proc" class="max-w-4xl h-auto rounded-lg shadow-lg mx-auto">
+                </div>
+    
+                <!-- Step 1 -> WAIT -->
+                <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #1 -> WAIT</h4>
+                    <p class="text-lg text-gray-700 max-w-full">Se espera al job de segmentación para poder avanzar.</p>
+                </section>
+    <!-- Step 2 -> Query Survey_Sent -->
+<section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+    <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #2 -> Survey Sent</h4>
+    <p class="text-lg text-gray-700 max-w-full">
+        En esta sección se crean dos tablas STG:
+    </p>
+    <ul class="list-disc pl-6">
+        <li><strong>STG.MAX_SAMPLE_DATETIME</strong></li>
+        <li><strong>FINAL_TABLE</strong></li>
+    </ul>
+    <p class="text-lg text-gray-700 max-w-full">
+        El propósito de estas consultas es asegurar que no se inserten registros duplicados en la tabla final (<strong>FINAL_TABLE</strong>) cuando se ejecute el trabajo múltiples veces. La lógica de las consultas es la siguiente:
+    </p>
+    <ol class="list-decimal pl-6">
+        <li>
+            En la primera parte, se crea una tabla intermedia <strong>STG.MAX_SAMPLE_DATETIME</strong> que contiene el último <code>SAMPLE_DATETIME</code> para cada cliente (<code>CUS_CUST_ID</code>) dentro de un universo determinado (<code>UNIVERSE</code>). Solo se seleccionan aquellos registros que no han sido procesados anteriormente (es decir, los que no aparecen en <strong>STG.MAX_SAMPLE_DATETIME</strong>).
+        </li>
+        <li>
+            En la segunda parte, se seleccionan registros de la tabla <strong>HISTORICA</strong> que coinciden con el último <code>SAMPLE_DATETIME</code> de cada cliente, asegurando que solo se inserten aquellos que no han sido procesados antes, gracias a la unión con <strong>STG.MAX_SAMPLE_DATETIME</strong>.
+        </li>
+    </ol>
+</section>
+
+<!-- Step 3 -> SFTP TRANSFER -->
+<section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+    <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #3 -> SFTP TRANSFER</h4>
+    <p class="text-lg text-gray-700 max-w-full">
+        Este paso del proceso se encarga de recoger información sobre clientes y enviarla a un servicio llamado Qualtrics.
+    </p>
+    <ol class="list-decimal pl-6">
+        <li>
+            Se establece una conexión segura a un servidor remoto donde se pueden guardar y enviar archivos. Este paso es como abrir una puerta que nos permite enviar nuestros datos a un lugar específico en internet.
+        </li>
+        <li>
+            Se levantan variables por parámetro como:
+            <ul class="list-disc pl-6">
+                <li><strong>stg_table</strong>: La tabla donde se encuentran los datos de cliente, <code style="font-family: monospace; background-color: #f4f4f5; padding: 2px 4px; border-radius: 4px;">stg_table = os.getenv('FINAL_TABLE')</code>.</li>
+                <li><strong>csv_file</strong>: El nombre del archivo CSV, <code style="font-family: monospace; background-color: #f4f4f5; padding: 2px 4px; border-radius: 4px;">csv_file = os.getenv('CSV')</code>.</li>
+                <li><strong>interruptor</strong>: Condición del interruptor, <code style="font-family: monospace; background-color: #f4f4f5; padding: 2px 4px; border-radius: 4px;">interruptor = os.getenv('INTERRUPTOR')</code>. Si este interruptor tiene el valor "SI", se activará un condicional que enviará la encuesta solo a los usuarios de prueba (TEST) y obviará los resultados de la consulta. En caso contrario, si el interruptor tiene un valor de "NO", el envío será realizado a los usuarios seleccionados por la consulta, pero solo aquellos cuyo <strong>cust_id</strong> corresponda a la prueba (<code style="font-family: monospace; background-color: #f4f4f5; padding: 2px 4px; border-radius: 4px;">cust_id = os.getenv('CUST_ID')</code>).
+                </li>
+            </ul>
+        </li>
+        <li> 
+            Se prepara una consulta SQL, que es como una pregunta que hacemos a la base de datos. Esta consulta busca información sobre los clientes que queremos enviar, como nombres, correos electrónicos, y otra información importante.
+        </li>
+        <li> 
+            Ejecución de la consulta: Una vez que la consulta está lista, se envía a la base de datos para obtener los datos de los clientes. El resultado se guarda en un formato llamado <strong>DataFrame</strong>, que es una manera organizada de manejar datos en Python.
+        </li>
+        <li> 
+            Creación del archivo CSV: A partir de los datos obtenidos, se genera un archivo CSV (un tipo de archivo utilizado comúnmente para almacenar datos en forma de tabla). Este archivo contendrá toda la información que hemos recopilado, y su nombre incluirá la fecha de hoy para poder identificarlo fácilmente.
+        </li>
+        <li> 
+            Comprobación del archivo: Se verifica si el archivo CSV se creó correctamente. Si no se encuentra, se muestra un mensaje de error para asegurarse de que el proceso se está realizando como se espera.
+        </li>
+        <li> 
+            Envío del archivo al servidor remoto: Si el archivo existe, se transfiere al servidor SFTP donde se guardará. Este paso asegura que la información llegue al lugar correcto.
+        </li>
+        <li> 
+            Revisión de archivos en el servidor: Finalmente, se revisan los archivos almacenados en el servidor para confirmar que el archivo que se envió se encuentra allí, asegurando que el proceso ha sido exitoso.
+        </li>
+    </ol>
+</section>
+
+    <!-- Step 2 -> Query Survey_Sent -->
+    <section class="bg-blue-50 py-6 px-8 rounded-lg shadow-md mb-8">
+        <h4 class="text-xl font-semibold text-blue-600 mb-4">Step #4 -> SAVE_HISTORICAL_CONSOLIDATED</h4>
+        <p class="text-lg text-gray-700 max-w-full">
+            El último paso consiste en ejecutar un step Execute DataFlow almacena los resultados en una tabla consolidada. Esto nos permite saber efectivamente qué es lo que se envió.
+        </p>
     </section>
+</section>
     <section id="Beneficios" class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-8">
             <h3 class="text-3xl font-semibold text-blue-600 mb-8">Beneficios de la migración</h3>
@@ -531,6 +662,8 @@ bq_gaia.execute_query(query=query)
         <section class="bg-white p-6 rounded-lg shadow-lg">
         </section>
     </section>
+    
+
         <section id="FAQ" class="max-w-6xl mx-auto py-12 px-6">
             <h3 class="text-2xl font-bold text-gray-700 mb-6 text-center">Preguntas Frecuentes (FAQs)</h3>
             <div class="space-y-6">
@@ -644,6 +777,63 @@ bq_gaia.execute_query(query=query)
             });
         });
     </script>
+    <div id="modal2" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Descripción de NPS Loyalty</h2>
+            <p>Este muestreo está enfocado en medir la lealtad de los clientes a lo largo del tiempo...</p>
+        </div>
+    </div>
     
+    <!-- Estilos CSS -->
+    <style>
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+/* Efecto al pasar el cursor sobre la cruz */
+.modal-content .close:hover {
+        background-color: #782727;
+        color: #f8f7f7;
+    }
+    </style>
+    
+    <!-- JavaScript -->
+    <script>
+function openModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+}
+    </script>
+    <div id="myModal" class="modal hidden">
+        <div class="modal-content">
+            <p>Contenido del Modal</p>
+            <button onclick="closeModal('myModal')">Cerrar</button>
+        </div>
+    </div>
 </body>
 </html>
